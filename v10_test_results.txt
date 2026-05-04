@@ -1,0 +1,41 @@
+
+======================================================================
+TEST: V6 vs V10 (Advanced Online Learning)
+======================================================================
+20 games vs each of 5 opponents = 100 games per agent
+
+
+======================================================================
+TESTING: V6 (Learned Thresholds)
+======================================================================
+✓ Loaded trained weights from trained_weights.json
+  TightAggressive      16W-4L (80.0%)
+✓ Loaded trained weights from trained_weights.json
+  LoosePassive         17W-3L (85.0%)
+✓ Loaded trained weights from trained_weights.json
+  Defensive            20W-0L (100.0%)
+✓ Loaded trained weights from trained_weights.json
+  Random               19W-1L (95.0%)
+✓ Loaded trained weights from trained_weights.json
+  AggressiveBluffer    18W-2L (90.0%)
+  ----------------------------------------
+  OVERALL:           90W-10L (90.0%)
+
+======================================================================
+TESTING: V10 (40-Bucket + 40-Round Learning)
+======================================================================
+  TightAggressive      18W-2L (90.0%)
+  LoosePassive         19W-1L (95.0%)
+  Defensive            19W-1L (95.0%)
+  Random               20W-0L (100.0%)
+  AggressiveBluffer    17W-3L (85.0%)
+  ----------------------------------------
+  OVERALL:           93W-7L (93.0%)
+
+======================================================================
+FINAL COMPARISON
+======================================================================
+V6:  90.0%
+V10: 93.0%
+
+🏆 V10 WINS by 3.0%!

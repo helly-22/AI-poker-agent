@@ -1,0 +1,287 @@
+{
+  "bucket_adjustments": {
+    "0": 0.0,
+    "1": 0.0,
+    "2": 0.0,
+    "3": 0.0,
+    "4": 0.0,
+    "5": 0.0,
+    "6": 0.0,
+    "7": 0.0,
+    "8": 0.0,
+    "9": 0.0,
+    "10": 0.0,
+    "11": 0.0,
+    "12": 0.0,
+    "13": 0.0,
+    "14": 0.0,
+    "15": 0.0,
+    "16": 0.0,
+    "17": 0.0,
+    "18": 0.0,
+    "19": 0.0,
+    "20": -0.04,
+    "21": 0.0,
+    "22": 0.0,
+    "23": 0.0,
+    "24": 0.0,
+    "25": 0.0,
+    "26": 0.0,
+    "27": 0.0,
+    "28": 0.0,
+    "29": 0.0,
+    "30": 0.0,
+    "31": 0.0,
+    "32": -0.04,
+    "33": 0.0,
+    "34": 0.0,
+    "35": 0.0,
+    "36": 0.0,
+    "37": 0.0,
+    "38": 0.0,
+    "39": 0.0
+  },
+  "bucket_stats": {
+    "0": {
+      "wins": 0,
+      "losses": 0,
+      "win_rate": 0.5,
+      "adjustment": 0.0
+    },
+    "1": {
+      "wins": 0,
+      "losses": 0,
+      "win_rate": 0.5,
+      "adjustment": 0.0
+    },
+    "2": {
+      "wins": 0,
+      "losses": 0,
+      "win_rate": 0.5,
+      "adjustment": 0.0
+    },
+    "3": {
+      "wins": 0,
+      "losses": 0,
+      "win_rate": 0.5,
+      "adjustment": 0.0
+    },
+    "4": {
+      "wins": 0,
+      "losses": 0,
+      "win_rate": 0.5,
+      "adjustment": 0.0
+    },
+    "5": {
+      "wins": 0,
+      "losses": 0,
+      "win_rate": 0.5,
+      "adjustment": 0.0
+    },
+    "6": {
+      "wins": 0,
+      "losses": 0,
+      "win_rate": 0.5,
+      "adjustment": 0.0
+    },
+    "7": {
+      "wins": 0,
+      "losses": 0,
+      "win_rate": 0.5,
+      "adjustment": 0.0
+    },
+    "8": {
+      "wins": 0,
+      "losses": 0,
+      "win_rate": 0.5,
+      "adjustment": 0.0
+    },
+    "9": {
+      "wins": 0,
+      "losses": 0,
+      "win_rate": 0.5,
+      "adjustment": 0.0
+    },
+    "10": {
+      "wins": 0,
+      "losses": 0,
+      "win_rate": 0.5,
+      "adjustment": 0.0
+    },
+    "11": {
+      "wins": 0,
+      "losses": 0,
+      "win_rate": 0.5,
+      "adjustment": 0.0
+    },
+    "12": {
+      "wins": 0,
+      "losses": 0,
+      "win_rate": 0.5,
+      "adjustment": 0.0
+    },
+    "13": {
+      "wins": 0,
+      "losses": 0,
+      "win_rate": 0.5,
+      "adjustment": 0.0
+    },
+    "14": {
+      "wins": 0,
+      "losses": 0,
+      "win_rate": 0.5,
+      "adjustment": 0.0
+    },
+    "15": {
+      "wins": 0,
+      "losses": 0,
+      "win_rate": 0.5,
+      "adjustment": 0.0
+    },
+    "16": {
+      "wins": 0,
+      "losses": 0,
+      "win_rate": 0.5,
+      "adjustment": 0.0
+    },
+    "17": {
+      "wins": 0,
+      "losses": 0,
+      "win_rate": 0.5,
+      "adjustment": 0.0
+    },
+    "18": {
+      "wins": 0,
+      "losses": 0,
+      "win_rate": 0.5,
+      "adjustment": 0.0
+    },
+    "19": {
+      "wins": 0,
+      "losses": 0,
+      "win_rate": 0.5,
+      "adjustment": 0.0
+    },
+    "20": {
+      "wins": 7,
+      "losses": 0,
+      "win_rate": 1.0,
+      "adjustment": -0.04
+    },
+    "21": {
+      "wins": 0,
+      "losses": 0,
+      "win_rate": 0.5,
+      "adjustment": 0.0
+    },
+    "22": {
+      "wins": 0,
+      "losses": 0,
+      "win_rate": 0.5,
+      "adjustment": 0.0
+    },
+    "23": {
+      "wins": 0,
+      "losses": 0,
+      "win_rate": 0.5,
+      "adjustment": 0.0
+    },
+    "24": {
+      "wins": 0,
+      "losses": 0,
+      "win_rate": 0.5,
+      "adjustment": 0.0
+    },
+    "25": {
+      "wins": 0,
+      "losses": 0,
+      "win_rate": 0.5,
+      "adjustment": 0.0
+    },
+    "26": {
+      "wins": 1,
+      "losses": 1,
+      "win_rate": 0.5,
+      "adjustment": 0.0
+    },
+    "27": {
+      "wins": 0,
+      "losses": 0,
+      "win_rate": 0.5,
+      "adjustment": 0.0
+    },
+    "28": {
+      "wins": 0,
+      "losses": 0,
+      "win_rate": 0.5,
+      "adjustment": 0.0
+    },
+    "29": {
+      "wins": 0,
+      "losses": 0,
+      "win_rate": 0.5,
+      "adjustment": 0.0
+    },
+    "30": {
+      "wins": 0,
+      "losses": 0,
+      "win_rate": 0.5,
+      "adjustment": 0.0
+    },
+    "31": {
+      "wins": 0,
+      "losses": 0,
+      "win_rate": 0.5,
+      "adjustment": 0.0
+    },
+    "32": {
+      "wins": 1,
+      "losses": 0,
+      "win_rate": 1.0,
+      "adjustment": -0.04
+    },
+    "33": {
+      "wins": 0,
+      "losses": 0,
+      "win_rate": 0.5,
+      "adjustment": 0.0
+    },
+    "34": {
+      "wins": 0,
+      "losses": 0,
+      "win_rate": 0.5,
+      "adjustment": 0.0
+    },
+    "35": {
+      "wins": 0,
+      "losses": 0,
+      "win_rate": 0.5,
+      "adjustment": 0.0
+    },
+    "36": {
+      "wins": 0,
+      "losses": 0,
+      "win_rate": 0.5,
+      "adjustment": 0.0
+    },
+    "37": {
+      "wins": 0,
+      "losses": 0,
+      "win_rate": 0.5,
+      "adjustment": 0.0
+    },
+    "38": {
+      "wins": 0,
+      "losses": 0,
+      "win_rate": 0.5,
+      "adjustment": 0.0
+    },
+    "39": {
+      "wins": 0,
+      "losses": 0,
+      "win_rate": 0.5,
+      "adjustment": 0.0
+    }
+  },
+  "training_timestamp": "N/A"
+}

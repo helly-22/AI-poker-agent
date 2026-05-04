@@ -67,7 +67,11 @@ def timeout(seconds=None, use_signals=True, timeout_exception=TimeoutError, exce
         if not seconds:
             return function
 
-        if use_signals:
+        # On Windows, signals don't work - skip timeouts entirely
+        is_windows = sys.platform == 'win32'
+
+        if not is_windows and use_signals:
+            # Unix/Linux: Use signal-based timeout
             def handler(signum, frame):
                 _raise_exception(timeout_exception, exception_message)
 
@@ -85,10 +89,11 @@ def timeout(seconds=None, use_signals=True, timeout_exception=TimeoutError, exce
                         signal.signal(signal.SIGALRM, old)
             return new_function
         else:
+            # Windows or multiprocessing: Skip timeouts
             @wraps(function)
             def new_function(*args, **kwargs):
-                timeout_wrapper = _Timeout(function, timeout_exception, exception_message, seconds)
-                return timeout_wrapper(*args, **kwargs)
+                kwargs.pop('timeout', None)  # Remove timeout parameter if present
+                return function(*args, **kwargs)
             return new_function
 
     return decorate
@@ -96,36 +101,43 @@ def timeout(seconds=None, use_signals=True, timeout_exception=TimeoutError, exce
 def timeout2(seconds=None, defaultretval="Blah",exception_message="[EXP]: Action TimedOut",timeout_exception=TimeoutError):
     """
         Similar as before return a default value instead.
-        Uses Signals. Can you use multiprocessing instead.
+        Uses Signals on Unix/Linux. Timeouts disabled on Windows for stability.
     """
     def decorate(function):
 
         if not seconds:
             return function
 
-        
-        def handler(signum, frame):
-            _raise_exception(timeout_exception, exception_message)
-            #print("[EXP] : TimedOut, Returning Default Value (Fold)")
-            # print(defaultretval)
-            #return defaultretval
-        @wraps(function)
-        def new_function(*args, **kwargs):
-            new_seconds = kwargs.pop('timeout', seconds)
-            if new_seconds:
-                # print("[EXP] : No-TimeOut")
-                old = signal.signal(signal.SIGALRM, handler)
-                signal.setitimer(signal.ITIMER_REAL, new_seconds)
-            try:
-                return function(*args, **kwargs)
-            except TimeoutError :
-                print(exception_message)
-                return defaultretval
-            finally:
+        # Check if we're on Windows (SIGALRM not available)
+        is_windows = sys.platform == 'win32'
+
+        if not is_windows:
+            # Unix/Linux: Use signal-based timeout
+            def handler(signum, frame):
+                _raise_exception(timeout_exception, exception_message)
+
+            @wraps(function)
+            def new_function(*args, **kwargs):
+                new_seconds = kwargs.pop('timeout', seconds)
                 if new_seconds:
-                    signal.setitimer(signal.ITIMER_REAL, 0)
-                    signal.signal(signal.SIGALRM, old)
-        return new_function
+                    old = signal.signal(signal.SIGALRM, handler)
+                    signal.setitimer(signal.ITIMER_REAL, new_seconds)
+                try:
+                    return function(*args, **kwargs)
+                except TimeoutError :
+                    return defaultretval
+                finally:
+                    if new_seconds:
+                        signal.setitimer(signal.ITIMER_REAL, 0)
+                        signal.signal(signal.SIGALRM, old)
+            return new_function
+        else:
+            # Windows: Skip timeouts entirely (just run the function)
+            @wraps(function)
+            def new_function(*args, **kwargs):
+                kwargs.pop('timeout', None)  # Remove timeout parameter if present
+                return function(*args, **kwargs)
+            return new_function
 
     return decorate
 
